@@ -1,0 +1,166 @@
+[
+    {
+        "name": "turqoise",
+        "code": "#1abc9c"
+    },
+    {
+        "name": "greenSea",
+        "code": "#16a085"
+    },
+    {
+        "name": "emerald",
+        "code": "#2ecc71"
+    },
+    {
+        "name": "nephritis",
+        "code": "#27ae60"
+    },
+    {
+        "name": "green",
+        "code": "#4caf50"
+    },
+    {
+        "name": "lightGreen",
+        "code": "#8bc34a"
+    },
+    {
+        "name": "lime",
+        "code": "#cddc39"
+    },
+    {
+        "name": "river",
+        "code": "#3498db"
+    },
+    {
+        "name": "belize",
+        "code": "#2980b9"
+    },
+    {
+        "name": "asphalt",
+        "code": "#34495e"
+    },
+    {
+        "name": "midnightBlue",
+        "code": "#2c3e50"
+    },
+    {
+        "name": "blue",
+        "code": "#2196f3"
+    },
+    {
+        "name": "lightBlue",
+        "code": "#03a9f4"
+    },
+    {
+        "name": "cyan",
+        "code": "#00bcd4"
+    },
+    {
+        "name": "teal",
+        "code": "#009688"
+    },
+    {
+        "name": "alizarin",
+        "code": "#e74c3c"
+    },
+    {
+        "name": "pomegranate",
+        "code": "#c0392b"
+    },
+    {
+        "name": "red",
+        "code": "#f44336"
+    },
+    {
+        "name": "carrot",
+        "code": "#e67e22"
+    },
+    {
+        "name": "pumpkin",
+        "code": "#d35400"
+    },
+    {
+        "name": "dullOrange",
+        "code": "#f39c12"
+    },
+    {
+        "name": "orange",
+        "code": "#ff9800"
+    },
+    {
+        "name": "bloodOrange",
+        "code": "#ff5722"
+    },
+    {
+        "name": "amber",
+        "code": "#ffc107"
+    },
+    {
+        "name": "sunflower",
+        "code": "#f1c40f"
+    },
+    {
+        "name": "yellow",
+        "code": "#ffeb3b"
+    },
+    {
+        "name": "amethyst",
+        "code": "#9b59b6"
+    },
+    {
+        "name": "plum",
+        "code": "#8e44ad"
+    },
+    {
+        "name": "purple",
+        "code": "#9c27b0"
+    },
+    {
+        "name": "deepPurple",
+        "code": "#673ab7"
+    },
+    {
+        "name": "pink",
+        "code": "#e91e63"
+    },
+    {
+        "name": "indigo",
+        "code": "#3f51b5"
+    },
+    {
+        "name": "brown",
+        "code": "#795548"
+    },
+    {
+        "name": "grey",
+        "code": "#9e9e9e"
+    },
+    {
+        "name": "gunMetal",
+        "code": "#607d8b"
+    },
+    {
+        "name": "asbestos",
+        "code": "#7f8c8d"
+    },
+    {
+        "name": "concrete",
+        "code": "#95a5a6"
+    },
+    {
+        "name": "silver",
+        "code": "#bdc3c7"
+    },
+    {
+        "name": "clouds",
+        "code": "#ecf0f1"
+    },
+    {
+        "name": "paper",
+        "code": "#efefef"
+    },
+    {
+        "name": "offWhite",
+        "code": "#fcfcfc"
+    }
+]

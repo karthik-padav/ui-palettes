@@ -1,0 +1,82 @@
+[
+    {
+        "metroColor": "Lime",
+        "colorCode": "#a4c400"
+    },
+    {
+        "metroColor": "Green",
+        "colorCode": "#60a917"
+    },
+    {
+        "metroColor": "Emerald",
+        "colorCode": "#008a00"
+    },
+    {
+        "metroColor": "Teal",
+        "colorCode": "#00aba9"
+    },
+    {
+        "metroColor": "Cyan",
+        "colorCode": "#1ba1e2"
+    },
+    {
+        "metroColor": "Cobalt",
+        "colorCode": "#0050ef"
+    },
+    {
+        "metroColor": "Indigo",
+        "colorCode": "#6a00ff"
+    },
+    {
+        "metroColor": "Violet",
+        "colorCode": "#aa00ff"
+    },
+    {
+        "metroColor": "Pink",
+        "colorCode": "#f472d0"
+    },
+    {
+        "metroColor": "Magenta",
+        "colorCode": "#d80073"
+    },
+    {
+        "metroColor": "Crimson",
+        "colorCode": "#a20025"
+    },
+    {
+        "metroColor": "Red",
+        "colorCode": "#e51400"
+    },
+    {
+        "metroColor": "Orange",
+        "colorCode": "#fa6800"
+    },
+    {
+        "metroColor": "Amber",
+        "colorCode": "#f0a30a"
+    },
+    {
+        "metroColor": "Yellow",
+        "colorCode": "#e3c800"
+    },
+    {
+        "metroColor": "Brown",
+        "colorCode": "#825a2c"
+    },
+    {
+        "metroColor": "Olive",
+        "colorCode": "#6d8764"
+    },
+    {
+        "metroColor": "Steel",
+        "colorCode": "#647687"
+    },
+    {
+        "metroColor": "Mauve",
+        "colorCode": "#76608a"
+    },
+    {
+        "metroColor": "Sienna",
+        "colorCode": "#a0522d"
+    }
+]

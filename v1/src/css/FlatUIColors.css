@@ -1,0 +1,11 @@
+.flatUi_box .zoom {
+    cursor: pointer;
+    min-height: 70px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.flatUi_box {
+    text-transform: capitalize;
+    margin: 0;
+}

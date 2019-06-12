@@ -1,0 +1,146 @@
+[
+    {
+        "socialMedia": "Facebook",
+        "colorCode": "#3b5999"
+    },
+    {
+        "socialMedia": "Messenger",
+        "colorCode": "#0084ff"
+    },
+    {
+        "socialMedia": "Twitter",
+        "colorCode": "#55acee"
+    },
+    {
+        "socialMedia": "LinkedIn",
+        "colorCode": "#0077B5"
+    },
+    {
+        "socialMedia": "Skype",
+        "colorCode": "#00AFF0"
+    },
+    {
+        "socialMedia": "Dropbox",
+        "colorCode": "#007ee5"
+    },
+    {
+        "socialMedia": "Wordpress",
+        "colorCode": "#21759b"
+    },
+    {
+        "socialMedia": "Vimeo",
+        "colorCode": "#1ab7ea"
+    },
+    {
+        "socialMedia": "SlideShare",
+        "colorCode": "#0077b5"
+    },
+    {
+        "socialMedia": "VK",
+        "colorCode": "#4c75a3"
+    },
+    {
+        "socialMedia": "Tumblr",
+        "colorCode": "#34465d"
+    },
+    {
+        "socialMedia": "Yahoo",
+        "colorCode": "#410093"
+    },
+    {
+        "socialMedia": "Google Plus",
+        "colorCode": "#dd4b39"
+    },
+    {
+        "socialMedia": "Pinterest",
+        "colorCode": "#bd081c"
+    },
+    {
+        "socialMedia": "Youtube",
+        "colorCode": "#cd201f"
+    },
+    {
+        "socialMedia": "StumbleUpon",
+        "colorCode": "#eb4924"
+    },
+    {
+        "socialMedia": "Reddit",
+        "colorCode": "#ff5700"
+    },
+    {
+        "socialMedia": "Quora",
+        "colorCode": "#b92b27"
+    },
+    {
+        "socialMedia": "Yelp",
+        "colorCode": "#af0606"
+    },
+    {
+        "socialMedia": "Weibo",
+        "colorCode": "#df2029"
+    },
+    {
+        "socialMedia": "ProductHunt",
+        "colorCode": "#da552f"
+    },
+    {
+        "socialMedia": "HackerNews",
+        "colorCode": "#ff6600"
+    },
+    {
+        "socialMedia": "Soundcloud",
+        "colorCode": "#ff3300"
+    },
+    {
+        "socialMedia": "Blogger",
+        "colorCode": "#f57d00"
+    },
+    {
+        "socialMedia": "WhatsApp",
+        "colorCode": "#25D366"
+    },
+    {
+        "socialMedia": "WeChat",
+        "colorCode": "#09b83e"
+    },
+    {
+        "socialMedia": "Line",
+        "colorCode": "#00c300"
+    },
+    {
+        "socialMedia": "Medium",
+        "colorCode": "#02b875"
+    },
+    {
+        "socialMedia": "Vine",
+        "colorCode": "#00b489"
+    },
+    {
+        "socialMedia": "Slack",
+        "colorCode": "#3aaf85"
+    },
+    {
+        "socialMedia": "Instagram",
+        "colorCode": "#e4405f"
+    },
+    {
+        "socialMedia": "Dribbble",
+        "colorCode": "#ea4c89"
+    },
+    {
+        "socialMedia": "Flickr",
+        "colorCode": "#ff0084"
+    },
+    {
+        "socialMedia": "FourSquare",
+        "colorCode": "#f94877"
+    },
+    {
+        "socialMedia": "Behance",
+        "colorCode": "#131418"
+    },
+    {
+        "socialMedia": "SnapChat",
+        "colorCode": "#FFFC00"
+    }
+]

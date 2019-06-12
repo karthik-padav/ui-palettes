@@ -1,0 +1,12 @@
+.socialMedia_box .zoom {
+    cursor: pointer;
+    min-height: 70px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.socialMedia_box {
+    text-transform: capitalize;
+    margin: 0;
+    color: #ffffff;
+}

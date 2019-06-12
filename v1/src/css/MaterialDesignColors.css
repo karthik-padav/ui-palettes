@@ -1,0 +1,10 @@
+.material_table td,
+.material_table th {
+    border-top: 0px !important;
+    cursor: pointer;
+    min-width: 50px;
+}
+
+.material_table .zoom {
+    box-shadow: 0 8px 6px -6px black;
+}

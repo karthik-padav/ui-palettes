@@ -1,0 +1,18 @@
+.color_combination_box {
+    cursor: pointer;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.color_combination_box .box_w {
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.color_combination_box .zoom:hover {
+    box-shadow: 0 8px 6px -6px black;
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+.color_combination_box .color_w {
+    padding: 10px 0;
+}
