@@ -1,12 +1,16 @@
-.socialMedia_box .zoom {
+.socialMedia_box.zoom {
     cursor: pointer;
     min-height: 70px !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+.socialMedia_box.zoom:hover {
+    z-index: 1;
+    box-shadow: 0 8px 6px -6px black;
+}
 .socialMedia_box {
     text-transform: capitalize;
     margin: 0;
-    color: #ffffff;
+    color: rgba(255, 255, 255, 0.5);
 }

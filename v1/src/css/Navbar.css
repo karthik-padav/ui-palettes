@@ -1,0 +1,38 @@
+.navbar-nav a {
+    text-transform: uppercase;
+}
+.navbar-nav a:hover, a:focus {
+    color: #202121;
+}
+.main-menu > li > a:hover, .main-menu > li > a:focus {
+    background-color: transparent;
+    border-bottom: 1px solid red;
+}
+.nav > li > a {
+    border-bottom: 1px solid transparent;
+}
+.navbar {
+    border-bottom: 1px solid #E6EAEA;
+}
+.navbar-toggle .icon-bar {
+    background-color: #202121;
+}
+.fav-cart .glyphicon {
+    font-size: 20px;
+}
+.fav-cart a {
+    padding: 10px;
+}
+.fav-color {
+    background-color: transparent;
+    /* padding: 10px; */
+}
+.fav-color .glyphicon-heart {
+    font-size: 30px;
+    color: red;
+}
+.fav-color .badge {
+    position: absolute !important;
+    right: 12px;
+    top: 1px !important;
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { getFamousColors } from '../dataServices/getColorCode';
 import '../css/FamousColors.css';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 class FamousColors extends Component {
     constructor(props) {
@@ -26,8 +27,6 @@ class FamousColors extends Component {
                                                 <td
                                                     className="color_w zoom"
                                                     ref={code.hex}
-                                                    // onMouseEnter={() => this.isMouseOver(code, 'onMouseEnter')}
-                                                    // onMouseLeave={() => this.isMouseOver(code, 'onMouseLeave')}
                                                     title={code.hex}
                                                     style={{ 'backgroundColor': code.hex }}
                                                     key={i}>
@@ -47,14 +46,6 @@ class FamousColors extends Component {
                 </div>
             </React.Fragment>
         )
-    }
-
-    isMouseOver = (item, event) => {
-        if (event === 'onMouseLeave') {
-            this.refs[item.hex].innerHTML = "";
-        } else if (event === 'onMouseEnter') {
-            this.refs[item.hex].innerHTML = "Copy";
-        }
     }
 
     componentWillMount = () => {

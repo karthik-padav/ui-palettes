@@ -1,6 +1,17 @@
 .App {
   text-align: center;
 }
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+table td,
+table td {
+  color: rgba(255, 255, 255, 0.5);
+}
+a {
+  color: #202121;
+}
 /*
 
 .App-logo {

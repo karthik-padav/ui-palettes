@@ -1,12 +1,16 @@
-.MetroColors_box .zoom {
+.MetroColors_box.zoom {
     cursor: pointer;
     min-height: 70px !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+.MetroColors_box.zoom:hover {
+    z-index: 1;
+    box-shadow: 0 8px 6px -6px black;
+}
 .MetroColors_box {
     text-transform: capitalize;
     margin: 0;
-    color: #ffffff;
+    color: rgba(255, 255, 255, 0.5);
 }

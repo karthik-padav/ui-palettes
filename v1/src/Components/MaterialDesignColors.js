@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { getMaterialDesignColors } from '../dataServices/getColorCode';
 import '../css/MaterialDesignColors.css';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 export default class MaterialDesignColors extends Component {
     constructor(props) {
@@ -20,17 +21,21 @@ export default class MaterialDesignColors extends Component {
                                 {this.state.colorList.map((item, index) =>
                                     <tr key={index}>
                                         <th style={{
-                                            backgroundColor:item.color,
-                                            textTransform: 'capitalize'}}>{item.color}</th>
+                                            backgroundColor:item.color}}
+                                            className="text-center text-capitalize"
+                                            title={item.color}>{item.color}</th>
                                         {item.codeList.map((code, codeIndex) =>
-                                            <td className="zoom"
-                                                ref={code.code}
-                                                onClick={()=>this.copyToClipboard(code.code)}
-                                                onMouseEnter={()=>this.isMouseOver(code, 'onMouseEnter')}
-                                                onMouseLeave={()=>this.isMouseOver(code, 'onMouseLeave')}
-                                                style={{backgroundColor:code.code}}
-                                                key={codeIndex}
-                                                title={code.name+' '+code.code}>{code.name}</td>
+                                            <CopyToClipboard text={code.code}
+                                                onCopy={() => this.setState({copied: true})}>
+                                                <td className="zoom"
+                                                    ref={code.code}
+                                                    onClick={()=>this.copyToClipboard(code.code)}
+                                                    onMouseEnter={()=>this.isMouseOver(code, 'onMouseEnter')}
+                                                    onMouseLeave={()=>this.isMouseOver(code, 'onMouseLeave')}
+                                                    style={{backgroundColor:code.code}}
+                                                    key={codeIndex}
+                                                    title={code.name+' '+code.code}>{code.name}</td>
+                                                </CopyToClipboard>
                                         )}
                                     </tr>
                                 )}
@@ -39,6 +44,7 @@ export default class MaterialDesignColors extends Component {
                     </div>
                     <div className="col col-md-2">
                         asd
+                            <span>Copy to clipboard with span</span>
                     </div>
                 </div>
             </React.Fragment>

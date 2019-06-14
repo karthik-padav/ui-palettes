@@ -5,7 +5,37 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 import './App.css';
-// import 'bootstrap/dist/js/bootstrap.min.js';
+
+import { createStore } from "redux";
+
+const initalState = {
+    result: 1,
+    latestValue: []
+}
+
+const reducer = (state = initalState, action) => {
+    switch(action.type) {
+        case "ADD":
+        state = state + action.payload;
+        break;
+        case "SUBTRACT":
+        state = state - action.payload;
+        break;
+    }
+    return state;
+}
+
+const store = createStore(reducer);
+
+store.subscribe(() => {
+    console.log("Store updated! ", store.getState());
+})
+
+store.dispatch({
+    type: "ADD",
+    payload: 10
+});
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

@@ -5,7 +5,7 @@ import '../css/Navbar.css';
 function NavigationBar() {
     return (
         <React.Fragment>
-            <nav className="navbar navbar-inverse">
+            <nav className="navbar">
                 <div className="container-fluid">
                     <div className="navbar-header">
                         <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -16,28 +16,32 @@ function NavigationBar() {
                         <a className="navbar-brand" href="#">WebSiteName</a>
                     </div>
                     <div className="collapse navbar-collapse" id="myNavbar">
-                        <ul className="nav navbar-nav">
-
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
-                                <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Page 1-1</a></li>
-                                    <li><a href="#">Page 1-2</a></li>
-                                    <li><a href="#">Page 1-3</a></li>
+                        <ul className="nav navbar-nav main-menu">
+                            <li className="dropdown">
+                                <a className="dropdown-toggle" data-toggle="dropdown" href="#">Palette
+                                <span className="caret"></span></a>
+                                <ul className="dropdown-menu">
+                                    <li><NavLink exact activeStyle={{ color: 'red' }} to="/famouscolors">FAMOUS PALETTES</NavLink></li>
+                                    <li><NavLink exact activeStyle={{ color: 'red' }} to="/colorcombination">color combination</NavLink></li>
                                 </ul>
                             </li>
-                            <li><NavLink exact activeStyle={{ color: 'red' }} to="/">Home</NavLink></li>
-                            <li><NavLink exact activeStyle={{ color: 'red' }} to="/flatcolors">flatcolors</NavLink></li>
-                            <li><NavLink exact activeStyle={{ color: 'red' }} to="/metrocolors">metrocolors</NavLink></li>
-                            <li><NavLink exact activeStyle={{ color: 'red' }} to="/socialcolors">socialcolors</NavLink></li>
+                            <li><NavLink exact activeStyle={{ color: 'red' }} to="/">Material Design</NavLink></li>
+                            <li><NavLink exact activeStyle={{ color: 'red' }} to="/flatcolors">Flat UI Colors</NavLink></li>
+                            <li><NavLink exact activeStyle={{ color: 'red' }} to="/metrocolors">Metro Colors</NavLink></li>
+                            <li><NavLink exact activeStyle={{ color: 'red' }} to="/socialcolors">Social Colors</NavLink></li>
                             <li><NavLink exact activeStyle={{ color: 'red' }} to="/colorpicker">colorpicker</NavLink></li>
-                            <li><NavLink exact activeStyle={{ color: 'red' }} to="/famouscolors">famouscolor</NavLink></li>
-                            <li><NavLink exact activeStyle={{ color: 'red' }} to="/colorcombination">colorcombination</NavLink></li>
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
-                            <li><a href="#"><span className="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                            <li><a href="#"><span className="glyphicon glyphicon-log-in"></span> Login</a></li>
+                            {/* <li className="fav-cart">
+                            <a href="#">
+                                <span class="glyphicon glyphicon-heart-empty"></span>
+                                <span class="glyphicon glyphicon-heart"></span>
+                            </a>
+                            </li> */}
+                            <button type="button" className="btn fav-color">
+                                <span className="glyphicon glyphicon-heart"></span>
+                                <span className="badge">7</span>
+                            </button>
                         </ul>
                     </div>
                 </div>
