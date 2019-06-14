@@ -25,7 +25,9 @@ export default class MaterialDesignColors extends Component {
                                             className="text-center text-capitalize"
                                             title={item.color}>{item.color}</th>
                                         {item.codeList.map((code, codeIndex) =>
-                                            <CopyToClipboard text={code.code}
+                                            <CopyToClipboard
+                                                text={code.code}
+                                                key={codeIndex}
                                                 onCopy={() => this.setState({copied: true})}>
                                                 <td className="zoom"
                                                     ref={code.code}
@@ -33,7 +35,6 @@ export default class MaterialDesignColors extends Component {
                                                     onMouseEnter={()=>this.isMouseOver(code, 'onMouseEnter')}
                                                     onMouseLeave={()=>this.isMouseOver(code, 'onMouseLeave')}
                                                     style={{backgroundColor:code.code}}
-                                                    key={codeIndex}
                                                     title={code.name+' '+code.code}>{code.name}</td>
                                                 </CopyToClipboard>
                                         )}

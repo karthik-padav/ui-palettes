@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import '../css/Navbar.css';
+import {connect} from 'react-redux';
 
-function NavigationBar() {
+class NavigationBar extends Component {
+    render(){
+        console.log(this.props);
     return (
         <React.Fragment>
             <nav className="navbar">
@@ -40,7 +43,7 @@ function NavigationBar() {
                             </li> */}
                             <button type="button" className="btn fav-color">
                                 <span className="glyphicon glyphicon-heart"></span>
-                                <span className="badge">7</span>
+                                <span className="badge"></span>
                             </button>
                         </ul>
                     </div>
@@ -49,5 +52,23 @@ function NavigationBar() {
         </React.Fragment>
     );
 }
+}
 
-export default NavigationBar;
+const mapStateToProps = (state) => {
+    return {
+        favColor: state.favColorReducer
+    };
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        favColor: (color) => {
+            dispatch({
+                type: 'PUSH_COLOR',
+                payload: color
+            })
+        }
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavigationBar);

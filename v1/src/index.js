@@ -6,38 +6,62 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 import './App.css';
 
-import { createStore } from "redux";
+import { createStore, combineReducers } from "redux";
+import { Provider } from 'react-redux';
 
-const initalState = {
-    result: 1,
-    latestValue: []
-}
-
-const reducer = (state = initalState, action) => {
+const favColorReducer = (state = {
+    colorArray: 'asdasd'
+}, action) => {
     switch(action.type) {
-        case "ADD":
-        state = state + action.payload;
+        case "PUSH_COLOR":
+        state = {
+            notificationArray: [...state.notificationArray, action.payload]
+        };
         break;
-        case "SUBTRACT":
-        state = state - action.payload;
+        case "POP_COLOR":
+        state = {
+            notificationArray: [...state.notificationArray, action.payload]
+        };
         break;
     }
     return state;
 }
 
-const store = createStore(reducer);
+const messageReducer = (state = {
+    notificationArray: []
+}, action) => {
+    switch(action.type) {
+        case "ADD_NOTIFICATION":
+        state = {
+            notificationArray: [...state.notificationArray, action.payload]
+        };
+        break;
+        case "REMOVE_NOTIFICATION":
+        state = {
+            ...state,
+            result: state.result - action.payload
+        };
+        break;
+    }
+    return state;
+}
 
-store.subscribe(() => {
-    console.log("Store updated! ", store.getState());
-})
+const store = createStore(combineReducers({favColorReducer, messageReducer}));
 
-store.dispatch({
-    type: "ADD",
-    payload: 10
-});
+// store.subscribe(() => {
+//     console.log("Store updated! ", store.getState());
+// })
+
+// store.dispatch({
+//     type: "ADD",
+//     payload: 10
+// });
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+<Provider store={store}>
+    <App />
+</Provider>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
