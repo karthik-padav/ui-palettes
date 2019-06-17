@@ -1,70 +1,102 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import '../css/Navbar.css';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import ShareMediaList from './shareMediaList';
 
 class NavigationBar extends Component {
-    render(){
-        console.log(this.props);
-    return (
-        <React.Fragment>
-            <nav className="navbar">
-                <div className="container-fluid">
-                    <div className="navbar-header">
-                        <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                            <span className="icon-bar"></span>
-                            <span className="icon-bar"></span>
-                            <span className="icon-bar"></span>
-                        </button>
-                        <a className="navbar-brand" href="#">WebSiteName</a>
-                    </div>
-                    <div className="collapse navbar-collapse" id="myNavbar">
-                        <ul className="nav navbar-nav main-menu">
-                            <li className="dropdown">
-                                <a className="dropdown-toggle" data-toggle="dropdown" href="#">Palette
-                                <span className="caret"></span></a>
-                                <ul className="dropdown-menu">
-                                    <li><NavLink exact activeStyle={{ color: 'red' }} to="/famouscolors">FAMOUS PALETTES</NavLink></li>
-                                    <li><NavLink exact activeStyle={{ color: 'red' }} to="/colorcombination">color combination</NavLink></li>
-                                </ul>
-                            </li>
-                            <li><NavLink exact activeStyle={{ color: 'red' }} to="/">Material Design</NavLink></li>
-                            <li><NavLink exact activeStyle={{ color: 'red' }} to="/flatcolors">Flat UI Colors</NavLink></li>
-                            <li><NavLink exact activeStyle={{ color: 'red' }} to="/metrocolors">Metro Colors</NavLink></li>
-                            <li><NavLink exact activeStyle={{ color: 'red' }} to="/socialcolors">Social Colors</NavLink></li>
-                            <li><NavLink exact activeStyle={{ color: 'red' }} to="/colorpicker">colorpicker</NavLink></li>
-                        </ul>
-                        <ul className="nav navbar-nav navbar-right">
-                            {/* <li className="fav-cart">
-                            <a href="#">
-                                <span class="glyphicon glyphicon-heart-empty"></span>
-                                <span class="glyphicon glyphicon-heart"></span>
-                            </a>
-                            </li> */}
-                            <button type="button" className="btn fav-color">
-                                <span className="glyphicon glyphicon-heart"></span>
-                                <span className="badge"></span>
+    render() {
+        return (
+            <React.Fragment>
+                <nav className="navbar navbar-fixed-top">
+                    <div className="container-fluid">
+                        <div className="navbar-header">
+                            <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span className="icon-bar"></span>
+                                <span className="icon-bar"></span>
+                                <span className="icon-bar"></span>
                             </button>
-                        </ul>
+                            <a className="navbar-brand" href="./">
+                                <h1>UI PALETTES</h1>
+                                {/* <img src={require('../utilities/images/logo.png')} alt="logo" /> */}
+                            </a>
+                        </div>
+                        <div className="collapse navbar-collapse" id="myNavbar">
+                            <ul className="nav navbar-nav main-menu">
+                                <li><NavLink exact activeStyle={{ color: '#FF9933' }} to="/">Material Design</NavLink></li>
+                                <li className="dropdown">
+                                    <a href="/" className="dropdown-toggle" data-toggle="dropdown">Palette
+                                <span className="caret"></span></a>
+                                    <ul className="dropdown-menu">
+                                        <li><NavLink exact activeStyle={{ color: '#FF9933' }} to="/popularcolors">Popular Colors</NavLink></li>
+                                        <li><NavLink exact activeStyle={{ color: '#FF9933' }} to="/colorcombination">color combination</NavLink></li>
+                                    </ul>
+                                </li>
+                                <li><NavLink exact activeStyle={{ color: '#FF9933' }} to="/flatcolors">Flat UI Colors</NavLink></li>
+                                <li><NavLink exact activeStyle={{ color: '#FF9933' }} to="/metrocolors">Metro Colors</NavLink></li>
+                                <li><NavLink exact activeStyle={{ color: '#FF9933' }} to="/socialcolors">Social Colors</NavLink></li>
+                                {/* <li><NavLink exact activeStyle={{ color: '#FF9933' }} to="/colorpicker">colorpicker</NavLink></li> */}
+                            </ul>
+                            <ul className="nav navbar-nav navbar-right">
+                                <div className="dropdown color_list">
+                                    <button className="btn fav-color">
+                                        <span className="glyphicon glyphicon-heart"></span>
+                                        <span className="badge">{this.props.favColorList.favColorArray.length}</span>
+                                    </button>
+                                    <div className="dropdown-content">
+                                        <ul className="list-group">
+                                            {this.props.favColorList.favColorArray.map((colorCode, index) =>
+                                                <li
+                                                    style={{ backgroundColor: colorCode }}
+                                                    className="list-group-item"
+                                                    key={index}>
+                                                    <CopyToClipboard
+                                                        text={colorCode}
+                                                        onCopy={() => this.setState({ copied: true })}>
+                                                        <span
+                                                            title="Copy"
+                                                            className="color-code">{colorCode}</span>
+                                                    </CopyToClipboard>
+                                                    <span
+                                                        onClick={() => this.props.removeFavColor(colorCode)}
+                                                        title="Remove"
+                                                        className="remove-color-code glyphicon glyphicon-remove"></span>
+                                                </li>
+                                            )}
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                {/* <div className="dropdown share_icon_w">
+                                    <button className="btn fav-color">
+                                        <span className="glyphicon glyphicon-share-alt"></span>
+                                    </button>
+                                    <div className="dropdown-content">
+                                        <ShareMediaList />
+                                    </div>
+                                </div> */}
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </nav>
-        </React.Fragment>
-    );
-}
+                </nav>
+            </React.Fragment>
+        );
+    }
 }
 
 const mapStateToProps = (state) => {
     return {
-        favColor: state.favColorReducer
+        favColorList: state.favColorReducer
     };
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        favColor: (color) => {
+        removeFavColor: (color) => {
             dispatch({
-                type: 'PUSH_COLOR',
+                type: 'POP_COLOR',
                 payload: color
             })
         }

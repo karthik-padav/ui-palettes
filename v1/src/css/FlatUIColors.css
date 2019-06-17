@@ -1,4 +1,4 @@
-.flatUi_box.zoom {
+.flatUi_box {
   cursor: pointer;
   min-height: 70px !important;
   display: flex;
@@ -6,11 +6,23 @@
   justify-content: center;
   color: rgba(255, 255, 255, 0.5);
 }
-.flatUi_box.zoom:hover {
-    z-index: 1;
-    box-shadow: 0 8px 6px -6px black;
-}
 .flatUi_box {
   text-transform: capitalize;
   margin: 0;
+}
+
+.flatUi_box p {
+  margin: 0;
+}
+.flatUi_box .copy-title {
+  display: none;
+}
+.flatUi_box:hover .copy-title {
+  display: block;
+}
+.flatUi_box .copy-code {
+  margin-right: 10px;
+}
+.flatUi_box:hover .copy-code {
+  display: none;
 }

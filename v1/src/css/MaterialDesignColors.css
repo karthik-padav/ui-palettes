@@ -3,8 +3,33 @@
     border-top: 0px !important;
     cursor: pointer;
     min-width: 50px;
+    padding: 10px 0 !important;
+    position: relative;
+    font-size: 12px;
 }
 
-.material_table .zoom:hover {
-    box-shadow: 0 8px 6px -6px black;
+.material_table td p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.material_table td .copy-title {
+    display: none;
+}
+.material_table td:hover .copy-title {
+    display: block;
+}
+.material_table td .copy-code {
+    margin-right: 10px;
+}
+.material_table td:hover .copy-code {
+    display: none;
+}
+
+button.btn.is-fav-color-btn {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px;
 }

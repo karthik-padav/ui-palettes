@@ -2,6 +2,10 @@
   font-family: "Varela Round";
   src: url('./utilities/fonts/VarelaRound-Regular.ttf');
 }
+@font-face {
+  font-family: "Flood";
+  src: url('./utilities/fonts/Flood.ttf');
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Varela Round", "Roboto", "Oxygen",
@@ -10,7 +14,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #202121;
-  background-color: #f4f7f6;
+  background-color: #ffffff;
 }
 
 code {

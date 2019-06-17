@@ -2,6 +2,9 @@ import React, { Component } from "react";
 
 import { getFlatUiColors } from "../dataServices/getColorCode";
 import "../css/FlatUIColors.css";
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { connect } from 'react-redux';
+import { Helmet } from "react-helmet";
 
 class FlatUIColors extends Component {
   constructor(props) {
@@ -10,49 +13,111 @@ class FlatUIColors extends Component {
       colorList: []
     };
   }
+
   render() {
     return (
       <React.Fragment>
-        <div className="row">
-          <div className="col col-md-10">
-            {this.state.colorList.map((item, index) => (
-              <div
-                style={{ backgroundColor: item.code }}
-                ref={item.code}
-                onMouseEnter={() => this.isMouseOver(item, "onMouseEnter")}
-                onMouseLeave={() => this.isMouseOver(item, "onMouseLeave")}
-                title={item.name + " " + item.code}
-                className="col col-md-2 flatUi_box zoom"
-                key={index}
-              >
-                {item.name}
-              </div>
-            ))}
-          </div>
-          <div className="col col-md-2">asd</div>
-        </div>
+      <Helmet>
+          <title>Flat UI colors</title>
+          <meta charset="UTF-8" />
+          <meta name="description" content="The Flat UI colors system can help you create a color theme that reflects your brand or style." />
+          <meta name="keywords" content="color picker, Flat UI colors, color picker hex, color schemes, color combination" />
+      </Helmet>
+      <h1 className="text-center margin-top-0 margin-bottom-15">Flat UI colors</h1>
+        {this.state.colorList.map((item, index) => (
+          <CopyToClipboard
+            key={index}
+            onCopy={() => this.showToastMessage(item.name + " " + item.code + ' Copied!')}>
+            <div
+              style={{ backgroundColor: item.code }}
+              title={item.name + " " + item.code}
+              className="col col-md-2 flatUi_box"
+            >
+              <button
+                className="btn is-fav-color-btn">
+                {this.props.favColorList.favColorArray.indexOf(item.code) > -1
+                  ?
+                  <span
+                    onClick={(e) => this.props.removeFavColor(item.code, e)}
+                    title="Copy to favorite list"
+                    className="glyphicon glyphicon-heart"></span>
+                  :
+                  <span
+                    onClick={(e) => this.props.addFavColor(item.code, e)}
+                    title="Copy to favorite list"
+                    className="glyphicon glyphicon-heart-empty"></span>
+                }
+              </button>
+              <p className="copy-title">Copy</p>
+              <p className="copy-code">{item.name}</p>
+            </div>
+          </CopyToClipboard>
+        ))}
       </React.Fragment>
     );
   }
 
-  isMouseOver = (item, event) => {
-    if (event === "onMouseLeave") {
-      this.refs[item.code].innerHTML = item.name;
-    } else if (event === "onMouseEnter") {
-      this.refs[item.code].innerHTML = "Copy";
-    }
-  };
-
   componentWillMount = () => {
+    this.props.isLoading(true);
     getFlatUiColors().then(res => {
-      console.log(res.data);
       if (res.status === 200) {
+        this.props.isLoading(false);
         this.setState({ colorList: res.data }, () => {
-          console.log(this.state.colorList);
         });
+      } else {
+        this.props.isLoading(false);
+        this.showToastMessage('Something went wrong please try after sometime.');
       }
     });
   };
+
+  showToastMessage(msg) {
+    this.props.toastMessage(msg, 'SHOW_TOAST_MSG');
+    setTimeout(() => {
+      this.props.toastMessage(null, 'HIDE_TOAST_MSG')
+    }, 3000);
+  }
 }
 
-export default FlatUIColors;
+
+const mapStateToProps = (state) => {
+  return {
+    favColorList: state.favColorReducer
+  };
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addFavColor: (color, e) => {
+      e.stopPropagation();
+      dispatch({
+        type: 'PUSH_COLOR',
+        payload: color
+      })
+    },
+
+    removeFavColor: (color, e) => {
+      e.stopPropagation();
+      dispatch({
+        type: 'POP_COLOR',
+        payload: color
+      })
+    },
+
+    isLoading: (flag) => {
+      dispatch({
+        type: 'IS_LOADING',
+        payload: flag
+      })
+    },
+
+    toastMessage: (msg, type) => {
+      dispatch({
+        type: type,
+        payload: msg
+      })
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(FlatUIColors);

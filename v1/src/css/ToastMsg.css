@@ -1,0 +1,16 @@
+.toast_message_wrapper {
+    position: fixed;
+    right: 10px;
+    bottom: 0px;
+}
+.toast_message_box {
+    background-color: #FF9933;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.toast_message_wrapper .message {
+    margin: 0;
+    color: #ffffff;
+    text-transform: capitalize;
+}
