@@ -17,7 +17,7 @@ class MaterialDesignColors extends Component {
         return (
             <React.Fragment>
                 <Helmet>
-                    <title>Material Design colors</title>
+                    <title>Material Design colors - The color picker</title>
                     <meta charset="UTF-8" />
                     <meta name="description" content="The Material Design color system can help you create a color theme that reflects your brand or style." />
                     <meta name="keywords" content="color picker, material design colours, color picker hex, color schemes, color combination" />

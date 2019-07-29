@@ -17,7 +17,7 @@ class FamousColors extends Component {
         return (
             <React.Fragment>
                 <Helmet>
-                    <title>Popular Colors</title>
+                    <title>Popular Colors - The color picker</title>
                     <meta charset="UTF-8" />
                     <meta name="description" content="The Popular color system can help you create a color theme that reflects your brand or style." />
                     <meta name="keywords" content="color picker, Popular colours, color picker hex, color schemes, color combination" />

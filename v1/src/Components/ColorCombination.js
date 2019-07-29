@@ -17,7 +17,7 @@ class ColorCombination extends Component {
         return (
             <React.Fragment>
             <Helmet>
-                <title>Color combination</title>
+                <title>Color combination - The color picker</title>
                 <meta charset="UTF-8" />
                 <meta name="description" content="The Color combination system can help you create a color theme that reflects your brand or style." />
                 <meta name="keywords" content="color picker, Color combination, color picker hex, color schemes, color combination" />

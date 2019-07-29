@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import '../css/Navbar.css';
 import { connect } from 'react-redux';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import ShareMediaList from './shareMediaList';
+// import ShareMediaList from './shareMediaList';
 
 class NavigationBar extends Component {
     render() {

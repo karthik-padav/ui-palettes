@@ -1,5 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import {
+  Route,
+  Switch,
+  Redirect,
+  HashRouter
+} from 'react-router-dom';
 
 import NavigationBar from './Components/NavigationBar';
 import MaterialDesignColors from './Components/MaterialDesignColors';
@@ -15,7 +20,7 @@ import Loader from './Components/Loader';
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <div className="App">
         <NavigationBar />
         <div className="body-w">
@@ -37,7 +42,7 @@ function App() {
           <Loader />
         </div>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
