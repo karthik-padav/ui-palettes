@@ -19,6 +19,7 @@ class AboutUs extends Component {
             content="color picker, Metro colors, color picker hex, color schemes, color combination"
           />
         </Helmet>
+        <img className="about_us_logo" src={require('../utilities/images/logo.png')} alt="logo" />
         <h1 className="text-center margin-top-0 margin-bottom-15">About us</h1>
         <div className="about_us_w text-left">
           <ul>

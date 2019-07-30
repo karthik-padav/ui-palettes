@@ -96,7 +96,8 @@ a:focus {
   padding-bottom: 0 !important;
 }
 .navbar-brand img {
-  width: 50px;
+  width: 130px;
+  padding: 10px;
 }
 nav.navbar {
   /* padding-top: 15px;

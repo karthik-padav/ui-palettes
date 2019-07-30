@@ -18,8 +18,7 @@ class NavigationBar extends Component {
                                 <span className="icon-bar"></span>
                             </button>
                             <a className="navbar-brand" href="./">
-                                <h1>UI PALETTES</h1>
-                                {/* <img src={require('../utilities/images/logo.png')} alt="logo" /> */}
+                                <img src={require('../utilities/images/logo.png')} alt="logo" />
                             </a>
                         </div>
                         <div className="collapse navbar-collapse" id="myNavbar">
