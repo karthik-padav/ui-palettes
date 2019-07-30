@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import '../css/Navbar.css';
 import { connect } from 'react-redux';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-// import ShareMediaList from './shareMediaList';
+import ShareMediaList from './shareMediaList';
 
 class NavigationBar extends Component {
     render() {
@@ -69,14 +69,14 @@ class NavigationBar extends Component {
                                 </div>
 
 
-                                {/* <div className="dropdown share_icon_w">
-                                    <button className="btn fav-color">
-                                        <span className="glyphicon glyphicon-share-alt"></span>
+                                <div className="dropdown share_icon_w">
+                                    <button className="btn share-color">
+                                        <span className="glyphicon glyphicon-share"></span>
                                     </button>
                                     <div className="dropdown-content">
                                         <ShareMediaList />
                                     </div>
-                                </div> */}
+                                </div>
                             </ul>
                         </div>
                     </div>

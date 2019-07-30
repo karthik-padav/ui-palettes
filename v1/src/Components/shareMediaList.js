@@ -18,8 +18,11 @@ import exampleImage from '../utilities/images/logo.png';
 
 class ShareMediaList extends Component {
     render() {
-        const shareUrl = 'https://karthik-padav.github.io';
-        const title = 'GitHub';
+        const shareUrl = 'http://thecolorpicker.com';
+        const title = `Collection of Material Design, Popular Colors, Flat UI
+        Colors, Metro Colors, Social Colors and many more. This tool
+        makes it easy to create, adjust, and experiment with custom
+        colors for the web.`;
         return (
             <ul className="list-group">
                 <li className="list-group-item">

@@ -29,3 +29,9 @@ table th {
 .margin-bottom-15 {
   margin-bottom: 15px;
 }
+
+@media only screen and (max-width: 1071px){
+  .body-w {
+    margin-top: 111px;
+  }
+}

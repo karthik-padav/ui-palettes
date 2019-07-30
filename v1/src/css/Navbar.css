@@ -27,11 +27,18 @@ a:focus {
 }
 .fav-color {
   background-color: transparent;
-  /* padding: 10px; */
+}
+.share-color {
+  background-color: transparent;
+  margin-left: 10px;
 }
 .fav-color .glyphicon-heart {
   font-size: 30px;
-  color: red;
+  color: #f2646c;
+}
+.share-color .glyphicon-share {
+  font-size: 25px;
+  color: #5b9ccc;
 }
 .fav-color .badge {
   position: absolute !important;
