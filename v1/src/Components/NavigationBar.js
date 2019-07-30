@@ -24,19 +24,20 @@ class NavigationBar extends Component {
                         </div>
                         <div className="collapse navbar-collapse" id="myNavbar">
                             <ul className="nav navbar-nav main-menu">
-                                <li><NavLink exact activeStyle={{ color: '#FF9933' }} to="/">Material Design</NavLink></li>
+                                <li><NavLink exact activeStyle={{ color: '#899bb4' }} to="/">Material Design</NavLink></li>
                                 <li className="dropdown">
                                     <a href="/" className="dropdown-toggle" data-toggle="dropdown">Palette
                                 <span className="caret"></span></a>
                                     <ul className="dropdown-menu">
-                                        <li><NavLink exact activeStyle={{ color: '#FF9933' }} to="/popularcolors">Popular Colors</NavLink></li>
-                                        <li><NavLink exact activeStyle={{ color: '#FF9933' }} to="/colorcombination">color combination</NavLink></li>
+                                        <li><NavLink exact activeStyle={{ color: '#899bb4' }} to="/popularcolors">Popular Colors</NavLink></li>
+                                        <li><NavLink exact activeStyle={{ color: '#899bb4' }} to="/colorcombination">color combination</NavLink></li>
                                     </ul>
                                 </li>
-                                <li><NavLink exact activeStyle={{ color: '#FF9933' }} to="/flatcolors">Flat UI Colors</NavLink></li>
-                                <li><NavLink exact activeStyle={{ color: '#FF9933' }} to="/metrocolors">Metro Colors</NavLink></li>
-                                <li><NavLink exact activeStyle={{ color: '#FF9933' }} to="/socialcolors">Social Colors</NavLink></li>
-                                {/* <li><NavLink exact activeStyle={{ color: '#FF9933' }} to="/colorpicker">colorpicker</NavLink></li> */}
+                                <li><NavLink exact activeStyle={{ color: '#899bb4' }} to="/flatcolors">Flat UI Colors</NavLink></li>
+                                <li><NavLink exact activeStyle={{ color: '#899bb4' }} to="/metrocolors">Metro Colors</NavLink></li>
+                                <li><NavLink exact activeStyle={{ color: '#899bb4' }} to="/socialcolors">Social Colors</NavLink></li>
+                                <li><NavLink exact activeStyle={{ color: '#899bb4' }} to="/about">About us</NavLink></li>
+                                {/* <li><NavLink exact activeStyle={{ color: '#899bb4' }} to="/colorpicker">colorpicker</NavLink></li> */}
                             </ul>
                             <ul className="nav navbar-nav navbar-right">
                                 <div className="dropdown color_list">

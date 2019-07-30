@@ -1,0 +1,12 @@
+.about_us_w {
+    width: 750px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.about_us_w li {
+    margin-top: 60px;
+    list-style: none;
+}
+.about_us_w li h3 {
+    margin: 20px 0;
+}

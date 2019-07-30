@@ -14,6 +14,7 @@ import SocialColors from './Components/SocialColors';
 import ColorPicker from './Components/ColorPicker';
 import FamousColors from './Components/FamousColors';
 import ColorCombination from './Components/ColorCombination';
+import AboutUs from './Components/AboutUs';
 import ToastMsg from './Components/ToastMessage';
 import Loader from './Components/Loader';
 
@@ -34,6 +35,7 @@ function App() {
                 <Route path="/socialcolors" component={SocialColors} />
                 <Route path="/popularcolors" component={FamousColors} />
                 <Route path="/colorcombination" component={ColorCombination} />
+                <Route path="/about" component={AboutUs} />
                 <Route path="*" render={() => <Redirect to={{ pathname: "/" }} />} />
               </Switch>
             </div>

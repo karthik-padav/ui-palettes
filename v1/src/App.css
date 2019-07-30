@@ -1,3 +1,13 @@
+body,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: gray;
+}
 .App {
   text-align: center;
   position: relative;
@@ -10,9 +20,6 @@ table td,
 table th {
   color: rgba(255, 255, 255, 0.5);
 }
-a {
-  color: #202121;
-}
 .body-w {
   margin-top: 70px;
 }
@@ -22,25 +29,3 @@ a {
 .margin-bottom-15 {
   margin-bottom: 15px;
 }
-/*
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-} */
