@@ -8,7 +8,7 @@ class AboutUs extends Component {
     return (
       <React.Fragment>
         <Helmet>
-          <title>About us - The color picker</title>
+          <title>About us - The color picker for graphic designers, web developers and many more.</title>
           <meta charset="UTF-8" />
           <meta
             name="description"
@@ -33,7 +33,7 @@ class AboutUs extends Component {
               </h3>
               <p>
                 <a href="http://www.thecolorpicker.com">
-                  <strong> thecolorpicker.com</strong>
+                  <strong> thecolorpicker.com </strong>
                 </a>
                 is a collection of Material Design, Popular Colors, Flat UI
                 Colors, Metro Colors, Social Colors and many more. This tool
@@ -56,7 +56,7 @@ class AboutUs extends Component {
                 serves thousands of color schemes for several different style
                 and art functions. the color palettes are being employed by
                 graphic designers, artists, illustrators, web developers,
-                fashion designers, marketers, interior designers, and more.
+                fashion designers, marketers, interior designers, and many more.
                 folks use
                 <a href="http://www.thecolorpicker.com">
                   <strong> thecolorpicker.com </strong>

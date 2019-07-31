@@ -18,7 +18,7 @@ class FlatUIColors extends Component {
     return (
       <React.Fragment>
       <Helmet>
-          <title>Flat UI colors - The color picker</title>
+          <title>Flat UI colors - The color picker for graphic designers, web developers and many more.</title>
           <meta charset="UTF-8" />
           <meta name="description" content="The Flat UI colors system can help you create a color theme that reflects your brand or style." />
           <meta name="keywords" content="color picker, Flat UI colors, color picker hex, color schemes, color combination" />

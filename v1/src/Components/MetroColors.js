@@ -17,7 +17,7 @@ class MetroColors extends Component {
     return (
       <React.Fragment>
       <Helmet>
-          <title>Metro colors - The color picker</title>
+          <title>Metro colors - The color picker for graphic designers, web developers and many more.</title>
           <meta charset="UTF-8" />
           <meta name="description" content="The Metro colors system can help you create a color theme that reflects your brand or style." />
           <meta name="keywords" content="color picker, Metro colors, color picker hex, color schemes, color combination" />
