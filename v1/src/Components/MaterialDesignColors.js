@@ -20,7 +20,7 @@ class MaterialDesignColors extends Component {
                     <title>Material Design colors - The color picker for graphic designers, web developers and many more.</title>
                     <meta charset="UTF-8" />
                     <meta name="description" content="The Material Design color system can help you create a color theme that reflects your brand or style." />
-                    <meta name="keywords" content="color picker, material design colours, color picker hex, color schemes, color combination" />
+                    <meta name="keywords" content="color picker, color picker hex, color picker for html, color picker html, color picker in html" />
                 </Helmet>
                 <h1 className="text-center margin-top-0 margin-bottom-15">Material Design colors</h1>
                 <table className="table material_table ml-5">

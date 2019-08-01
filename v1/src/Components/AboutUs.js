@@ -16,7 +16,7 @@ class AboutUs extends Component {
           />
           <meta
             name="keywords"
-            content="color picker, Metro colors, color picker hex, color schemes, color combination"
+            content="color picker, color picker hex, color picker for html, color picker html, color picker in html"
           />
         </Helmet>
         <img className="about_us_logo" src={require('../utilities/images/logo.png')} alt="logo" />
